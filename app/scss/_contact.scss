@@ -1,0 +1,21 @@
+.Contact__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
+    align-items: center;
+    display: flex;
+    font-weight: 300;
+    list-style: none;
+    width: 48%;
+    i {
+      border: 1px solid $secondColor;
+      border-radius: 50%;
+      color: $secondColor;
+      font-size: 1.5rem;
+      margin-right: .5rem;
+      padding: 1rem;
+    }
+  }
+}

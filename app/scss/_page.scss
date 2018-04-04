@@ -1,0 +1,22 @@
+.Page__title {
+  color: $firstColor;
+  font-size: 3.75rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  &::after {
+    background: transparent url('./../images/separator.png') center 0 no-repeat;
+    content: "";
+    display: block;
+    height: 13px;
+    margin: 0 auto;
+    width: 133px;
+  }
+  &--bgc {
+    background-color: $thirdColor;
+    color: white;
+    padding: 2rem 0;
+    &::after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.Login {
+  background: transparent url('./../images/bg-login.jpg') center top no-repeat;
+  background-size: cover;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.Login__logo, .Login__form, .Login__footer {
+  width: 100%;
+}
+.Login__footer {
+  display: flex;
+  padding: 0 1rem;
+}
+.Login__footer__logos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  li {
+    margin-right: 1.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

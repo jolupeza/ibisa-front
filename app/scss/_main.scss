@@ -1,0 +1,29 @@
+.Main {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 83px;
+  &--dashboard {
+    height: 100vh;
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
+  }
+  &--general {
+    .Sidebar {
+      position: fixed;
+      @media screen and (max-width: 991px) {
+        height: 100vh;
+      }
+    }
+    .Content {
+      padding-left: 10%;
+      width: 100%;
+      @media screen and (max-width: 1199px) {
+        padding-left: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 130px;
+  }
+}

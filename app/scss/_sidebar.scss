@@ -1,0 +1,148 @@
+.Sidebar {
+  background-color: $firstColor;
+  height: 100%;
+  overflow-y: auto;
+  width: 10%;
+  @media screen and (max-width: 1199px) {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    transition: left .5s ease-in-out;
+    z-index: 9;
+    width: 40%;
+    &--active {
+      left: 0;
+    }
+  }
+}
+.Sidebar__nav {
+  min-height: 100%;
+}
+.Sidebar__menu {
+  list-style: none;
+  padding: 1rem 0 3rem 0;
+  li {
+    font-family: $helvetica-light;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 100%;
+    a {
+      color: rgba(white, .6);
+      display: block;
+      font-size: .9375rem;
+      padding: .8rem .8rem .8rem .3rem;
+      transition: border-left .3s ease-out;
+      @media screen and (max-width: 1199px) {
+        padding: 1rem 0;
+      }
+    }
+    &.active, &:focus, &:hover {
+      a {
+        background-color: darken($firstColor, 10%);
+        border-left: 4px solid $secondColor;
+        color: white;
+        text-decoration: none;
+      }
+    }
+    [class^="icon-"] {
+      display: block;
+      font-size: 3rem;
+      @media screen and (max-width: 991px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    padding: 1rem 0;
+  }
+}
+.Sidebar__menu__close {
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+.Sidebar__secundary {
+  margin-bottom: 3rem;
+}
+.Sidebar__secundary__title {
+  @media screen and (max-width: 991px) {
+    text-align: center;
+  }
+
+}
+.Sidebar__secundary__nav {
+  background-color: white;
+  box-shadow: 0px 0px 3px rgba(black, .4);
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  @media screen and (max-width: 991px) {
+    background-color: $firstColor;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: right .5s ease-in-out;
+    z-index: 9;
+    width: 60%;
+    &.active {
+      right: 0;
+    }
+  }
+  &.active {
+  }
+  li {
+    border-bottom: 1px solid $borderColor;
+    font-family: $helvetica-light;
+    a {
+      color: darken($firstColor, 10%);
+      display: block;
+      font-size: 1rem;
+      padding: .8rem;
+      @media screen and (max-width: 991px) {
+        color: white;
+        padding: 1rem .8rem;
+      }
+      &:focus, &:hover {
+        color: $secondColor;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 75%;
+      }
+    }
+    [class^="icon-"] {
+      font-size: 1.5rem;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+    }
+    &.active {
+      a {
+        color: $secondColor;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: .875rem;
+    }
+    @media screen and (max-width: 991px) {
+      font-size: 1rem;
+    }
+  }
+}
+.Sidebar__secundary__close {
+  padding: 1.5em 2em 1.5em 0;
+  text-align: right;
+  .js-toggle-submenu {
+    background-color: transparent;
+    border: none;
+    color: darken($firstColor, 10%);
+    cursor: pointer;
+  }
+}

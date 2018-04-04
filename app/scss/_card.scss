@@ -1,0 +1,60 @@
+.Card {
+  &--hover {
+    overflow: hidden;
+  }
+}
+.Card__figure {
+  &--hover {
+    position: relative;
+    &:hover {
+      .Card__info--hover {
+        right: 0;
+      }
+    }
+  }
+}
+.Card__info {
+  &--hover {
+    background-color: $firstColor;
+    overflow: hidden;
+    padding: .8rem;
+    position: absolute;
+    right: -90%;
+    top: 50%;
+    transition: right .3s ease-out;
+    width: 90%;
+    .Card__title {
+      color: $secondColor;
+    }
+    .Card__text {
+      color: white;
+    }
+  }
+}
+.Card__title {}
+.Card__text {}
+.Card__posts {
+  justify-content: space-between;
+  display: flex;
+  &--feature {
+    display: block;
+    .Card__posts__figure, .Card__posts__info {
+      width: 100%;
+    }
+  }
+}
+.Card__posts__figure, .Card__posts__info {
+  width: 48%;
+}
+.Card__posts__title {
+  font-weight: 700;
+}
+.Card__posts__date {
+  color: $textColor;
+  font-weight: 400;
+}
+.Card__posts__text {
+  p {
+    font-size: 1rem;
+  }
+}

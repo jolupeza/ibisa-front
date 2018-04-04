@@ -1,0 +1,16 @@
+.Table__wrapper {
+  background-color: #fff;
+  box-shadow: 0px 0px 3px rgba(black, .4);
+  margin-bottom: 2em;
+  min-width: 100%;
+  overflow-x: auto;
+  position: relative;
+  table-layout: fixed;
+}
+.Table {
+  th {
+    color: $darkColor;
+    font-family: $helvetica-medium;
+    font-size: 1rem;
+  }
+}

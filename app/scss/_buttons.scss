@@ -1,0 +1,48 @@
+.Button {
+  background-color: $firstColor;
+  border: none;
+  border-radius: .5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: .8rem 2rem;
+  transition: background-color .2s ease-in-out;
+  &:focus, &:hover {
+    background-color: lighten($firstColor, 8%);
+  }
+  &--success {
+    background-color: $thirdColor;
+    &:focus, &:hover {
+      background-color: lighten($thirdColor, 8%);
+    }
+  }
+  &--danger {
+    background-color: $accentColor;
+    &:focus, &:hover {
+      background-color: lighten($accentColor, 8%);
+    }
+  }
+  &--secundary {
+    background-color: $secondColor;
+    &:focus, &:hover {
+      background-color: lighten($secondColor, 8%);
+    }
+  }
+  &--lg {
+    font-size: 1.875rem;
+    padding: 1rem 2.5rem;
+    @media screen and (max-width: 575px) {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  &--sm {
+    font-size: 1.25rem;
+    padding: .5rem 1.5rem;
+  }
+  &--xs {
+    font-size: 1.125rem;
+    padding: .3rem 1rem
+  }
+}

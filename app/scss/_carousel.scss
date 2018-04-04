@@ -1,0 +1,79 @@
+.Carousel {
+  background-color: $secondColor;
+  background-image: linear-gradient(to right, #dd4b1e, #75a195);
+  height: 100%;
+  overflow: hidden;
+  @media screen and (max-width: 991px) {
+    height: auto;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    height: 100%;
+  }
+  .carousel-item {
+    img {
+      object-fit: contain;
+    }
+  }
+  .carousel-indicators {
+    li {
+      background-color: rgba(white, .6);
+      border-radius: 50%;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      &.active {
+        background-color: #fff;
+      }
+    }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      bottom: 20px;
+    }
+  }
+  .carousel-caption {
+    align-content: center;
+    bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    left: auto;
+    padding: 0 3rem;
+    right: 0;
+    top: 0;
+    width: 50%;
+    @media screen and (max-width: 991px) {
+      padding: 1rem;
+    }
+    @media screen and (max-width: 767px) {
+      width: 70%;
+    }
+  }
+}
+.Carousel-caption-title, .Carousel-caption-desc {
+  width: 100%;
+}
+.Carousel-caption-title {
+  color: white;
+  font-family: $dinot-black;
+  font-size: 7.8125rem;
+  text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
+    font-size: 6rem;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 3rem;
+  }
+}
+.Carousel-caption-desc {
+  color: white;
+  font-family: $dinAlternateBlack;
+  font-size: 2.375rem;
+  @media screen and (max-width: 991px) {
+    font-size: 1.375rem;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.25rem;
+  }
+}

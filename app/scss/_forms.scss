@@ -1,0 +1,33 @@
+.Form {
+}
+.Form__group {
+}
+.Form__label {
+  &--check {
+    color: $borderColor;
+    a {
+      color: $borderColor;
+      &:focus, &:hover {
+        color: $secondColor;
+      }
+    }
+  }
+}
+.Form__control {
+  border-color: $borderColor;
+  color: $borderColor;
+  padding: .8rem .75rem;
+  &::placeholder {
+    font-weight: 300;
+  }
+  &:focus {
+
+  }
+  &[disabled] {
+    &::placeholder {
+    }
+  }
+}
+select.Form__control:not([size]):not([multiple]) {
+  height: auto;
+}

@@ -1,0 +1,7 @@
+.Video {
+  height: 100vh;
+  overflow: hidden;
+  img {
+    object-fit: contain;
+  }
+}
