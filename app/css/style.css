@@ -9545,8 +9545,8 @@ body {
 
 a {
   color: #29547a;
-  -webkit-transition: color .3s ease-out;
-  transition: color .3s ease-out; }
+  -webkit-transition: color .3s ease-out, background-color .2s ease-in-out;
+  transition: color .3s ease-out, background-color .2s ease-in-out; }
   a.hover, a:focus, a:hover {
     color: #7bc14f;
     text-decoration: none; }
@@ -9594,11 +9594,17 @@ h6, .h6 {
 
 p {
   font-size: 1.125em;
-  line-height: 1.3; }
+  line-height: 1.5; }
   p.small {
     font-size: 1em; }
   p.smaller {
     font-size: .875rem; }
+
+.small {
+  font-size: 1rem; }
+
+.smaller {
+  font-size: .875rem; }
 
 .firstColor {
   color: #29547a; }
@@ -9697,6 +9703,7 @@ p {
 
 .Footer {
   background-color: #29547a;
+  margin-top: 3rem;
   padding: 1rem 0; }
   .Footer p {
     color: white;
@@ -9761,6 +9768,73 @@ p {
     .Page__title--bgc::after {
       display: none; }
 
+.Page__subtitle {
+  color: #29547a;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem; }
+
+.Page__figure {
+  margin-bottom: 5rem;
+  position: relative; }
+
+.Page__header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  .Page__header .Page__title {
+    color: #7bc14f; }
+
+.Page__text {
+  margin-bottom: 5rem; }
+
+.Page__subpage {
+  padding: 2rem 0; }
+
+.Page__project__info {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem 0;
+  padding-left: 0; }
+  .Page__project__info li {
+    list-style: none; }
+
+.Page__project__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 2rem 0; }
+  .Page__project__nav a {
+    color: #3c3c3c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 700; }
+    .Page__project__nav a [class^="icon-"] {
+      font-size: 3rem; }
+    .Page__project__nav a:focus, .Page__project__nav a:hover {
+      color: #7bc14f; }
+
 .Form__label--check {
   color: #939292; }
   .Form__label--check a {
@@ -9790,13 +9864,15 @@ select.Form__control:not([size]):not([multiple]) {
   border-radius: .5rem;
   color: white;
   cursor: pointer;
+  display: inline-block;
   font-size: 1.5rem;
   font-weight: 600;
   padding: .8rem 2rem;
   -webkit-transition: background-color .2s ease-in-out;
   transition: background-color .2s ease-in-out; }
   .Button:focus, .Button:hover {
-    background-color: #336999; }
+    background-color: #336999;
+    color: white; }
   .Button--success {
     background-color: #5d93bc; }
     .Button--success:focus, .Button--success:hover {
@@ -9809,6 +9885,19 @@ select.Form__control:not([size]):not([multiple]) {
     background-color: #7bc14f; }
     .Button--secundary:focus, .Button--secundary:hover {
       background-color: #92cc6d; }
+  .Button--ghost {
+    background-color: transparent;
+    border: 1px solid white;
+    color: #29547a; }
+    .Button--ghost:focus, .Button--ghost:hover {
+      background-color: #29547a;
+      color: white; }
+    .Button--ghost--secundary {
+      border-color: #7bc14f;
+      color: #7bc14f; }
+      .Button--ghost--secundary:focus, .Button--ghost--secundary:hover {
+        background-color: #7bc14f;
+        color: white; }
   .Button--lg {
     font-size: 1.875rem;
     padding: 1rem 2.5rem; }
@@ -9850,8 +9939,10 @@ select.Form__control:not([size]):not([multiple]) {
       margin-right: .5rem;
       padding: 1rem; }
 
-.Card--hover {
+.Card {
   overflow: hidden; }
+  .Card--hover {
+    overflow: hidden; }
 
 .Card__figure--hover {
   position: relative; }
@@ -9872,6 +9963,26 @@ select.Form__control:not([size]):not([multiple]) {
     color: #7bc14f; }
   .Card__info--hover .Card__text {
     color: white; }
+
+.Card__info--bg {
+  background-color: #29547a;
+  padding: 1rem; }
+  .Card__info--bg .Card__title {
+    color: #7bc14f;
+    font-weight: 400;
+    margin-bottom: 0; }
+  .Card__info--bg .Card__subtitle {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 0; }
+
+.Card__title a {
+  color: #7bc14f; }
+  .Card__title a:focus, .Card__title a:hover {
+    color: #29547a; }
+
+.Card__text p {
+  font-size: 1rem; }
 
 .Card__posts {
   -webkit-box-pack: justify;

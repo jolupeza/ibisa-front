@@ -1,4 +1,5 @@
 .Card {
+  overflow: hidden;
   &--hover {
     overflow: hidden;
   }
@@ -30,9 +31,34 @@
       color: white;
     }
   }
+  &--bg {
+    background-color: $firstColor;
+    padding: 1rem;
+    .Card__title {
+      color: $secondColor;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    .Card__subtitle {
+      color: white;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
 }
-.Card__title {}
-.Card__text {}
+.Card__title {
+  a {
+    color: $secondColor;
+    &:focus, &:hover {
+      color: $firstColor;
+    }
+  }
+}
+.Card__text {
+  p {
+    font-size: 1rem;
+  }
+}
 .Card__posts {
   justify-content: space-between;
   display: flex;

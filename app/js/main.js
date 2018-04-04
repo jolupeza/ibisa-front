@@ -36,15 +36,17 @@ $(function () {
   $('.element-animate').hover(
     function () {
       var $this = $(this),
-          animation = $this.data('animation');
+          animation = $this.data('animation'),
+          parent = $this.parent();
 
-      $(this).addClass('animated ' + animation);
+      parent.addClass('animated ' + animation);
     },
     function () {
       var $this = $(this),
-          animation = $this.data('animation');
+          animation = $this.data('animation'),
+          parent = $this.parent();
 
-      $(this).removeClass('animated ' + animation);
+      parent.removeClass('animated ' + animation);
     }
   );
 

@@ -20,3 +20,57 @@
     }
   }
 }
+.Page__subtitle {
+  color: $firstColor;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.Page__figure {
+  margin-bottom: 5rem;
+  position: relative;
+}
+.Page__header {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .Page__title {
+    color: $secondColor;
+  }
+}
+.Page__text {
+  margin-bottom: 5rem;
+}
+.Page__subpage {
+  padding: 2rem 0;
+}
+.Page__project__info {
+  justify-content: space-between;
+  display: flex;
+  margin: 3rem 0;
+  padding-left: 0;
+  li {
+    list-style: none;
+  }
+}
+.Page__project__nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  a {
+    color: $darkColor;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    [class^="icon-"] {
+      font-size: 3rem;
+    }
+    &:focus, &:hover {
+      color: $secondColor;
+    }
+  }
+}

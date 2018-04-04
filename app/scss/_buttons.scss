@@ -4,12 +4,14 @@
   border-radius: .5rem;
   color: white;
   cursor: pointer;
+  display: inline-block;
   font-size: 1.5rem;
   font-weight: 600;
   padding: .8rem 2rem;
   transition: background-color .2s ease-in-out;
   &:focus, &:hover {
     background-color: lighten($firstColor, 8%);
+    color: white;
   }
   &--success {
     background-color: $thirdColor;
@@ -27,6 +29,23 @@
     background-color: $secondColor;
     &:focus, &:hover {
       background-color: lighten($secondColor, 8%);
+    }
+  }
+  &--ghost {
+    background-color: transparent;
+    border: 1px solid white;
+    color: $firstColor;
+    &:focus, &:hover {
+      background-color: $firstColor;
+      color: white;
+    }
+    &--secundary {
+      border-color: $secondColor;
+      color: $secondColor;
+      &:focus, &:hover {
+        background-color: $secondColor;
+        color: white;
+      }
     }
   }
   &--lg {
