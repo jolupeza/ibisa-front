@@ -9835,6 +9835,9 @@ p {
     .Page__project__nav a:focus, .Page__project__nav a:hover {
       color: #7bc14f; }
 
+.Page__single__figure {
+  margin: 5rem 0; }
+
 .Form__label--check {
   color: #939292; }
   .Form__label--check a {
@@ -9938,6 +9941,31 @@ select.Form__control:not([size]):not([multiple]) {
       font-size: 1.5rem;
       margin-right: .5rem;
       padding: 1rem; }
+
+.Pagination {
+  margin: 2rem 0; }
+
+.Pagination__list .page-link {
+  border-color: #939292;
+  color: #3c3c3c; }
+
+.Pagination__list .page-item {
+  margin-right: 1rem; }
+  .Pagination__list .page-item:first-child .page-link, .Pagination__list .page-item:last-child .page-link {
+    border: none;
+    border-radius: 0;
+    font-size: 2rem;
+    padding: 0; }
+  .Pagination__list .page-item:last-child {
+    margin-right: 0; }
+  .Pagination__list .page-item.active .page-link {
+    background-color: #29547a;
+    border-color: #29547a;
+    color: white; }
+  .Pagination__list .page-item:focus .page-link, .Pagination__list .page-item:hover .page-link {
+    background-color: #29547a;
+    border-color: #29547a;
+    color: white; }
 
 .Card {
   overflow: hidden; }
