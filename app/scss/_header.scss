@@ -1,9 +1,17 @@
 .Header {
   padding: 1.5rem 0;
-  position: absolute;
+  position: fixed;
   top: 0;
+  transition: padding .2s ease-in, background-color .3s ease-out;
   width: 100%;
   z-index: 9;
+  &--black {
+    background-color: rgba(black, .3);
+  }
+  &--scroll {
+    background-color: rgba(black, .3);
+    padding: .3rem 0;
+  }
 }
 .Header__nav {
   display: flex;
@@ -29,7 +37,7 @@
         text-decoration: none;
       }
     }
-    &.active {
+    &.active, &.current-menu-item, &.current-menu-parent {
       a {
         color: $secondColor;
       }

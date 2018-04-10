@@ -96,8 +96,8 @@ gulp.task('js-sync', ['compress'], () => {
 gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
     proxy: "ibisa.front",
-    browser: "chrome"
-    //browser: ["chrome", "firefox"]
+    browser: "google-chrome"
+    //browser: ["chrome", "firefox", "google-chrome"]
   });
 
   gulp.watch([config.template + '/*.html', config.scssDir + '/**/*.scss']).on('change', sync.reload);

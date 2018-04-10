@@ -10,47 +10,59 @@ function verifyMedia () {
 }
 /*******************************************************/
 
-$(function () {
-  var $window = $(window),
-      $document = $(document);
+;(function ($) {
+  var $window = $(window);
 
-  $window.on('scroll', function (ev) {
-    var arrow = $('.ArrowTop');
+  $(function () {
+    $window.on('scroll', function () {
+      var arrow = $('.ArrowTop');
 
-    if ( $(this).scrollTop() > 150 ) {
-      arrow.fadeIn();
+      if ( $(this).scrollTop() > 150 ) {
+        arrow.fadeIn();
+      } else {
+        arrow.fadeOut();
+      }
+
+      checkScrollHeader();
+    });
+
+    $('.ArrowTop').on('click', function (ev) {
+      ev.preventDefault();
+
+      $('html, body').animate({scrollTop: 0}, 800);
+    });
+
+    $('.element-animate').hover(
+      function () {
+        var $this = $(this),
+            animation = $this.data('animation'),
+            parent = $this.parent();
+
+        parent.addClass('animated ' + animation);
+      },
+      function () {
+        var $this = $(this),
+            animation = $this.data('animation'),
+            parent = $this.parent();
+
+        parent.removeClass('animated ' + animation);
+      }
+    );
+
+    //$window.on('resize',  function () {
+    //  verifyMedia();
+    //});
+  });
+
+  function checkScrollHeader () {
+    var minScroll = 50,
+        header = $('.Header');
+
+    if ($window.scrollTop() > minScroll) {
+      header.addClass('Header--scroll');
     } else {
-      arrow.fadeOut();
+      header.removeClass('Header--scroll');
     }
-  });
+  }
+})(jQuery);
 
-  $('.ArrowTop').on('click', function (ev) {
-    ev.preventDefault();
-
-    $('html, body').animate({scrollTop: 0}, 800);
-  });
-
-  //$document.on('ready', function () {
-  //});
-
-  $('.element-animate').hover(
-    function () {
-      var $this = $(this),
-          animation = $this.data('animation'),
-          parent = $this.parent();
-
-      parent.addClass('animated ' + animation);
-    },
-    function () {
-      var $this = $(this),
-          animation = $this.data('animation'),
-          parent = $this.parent();
-
-      parent.removeClass('animated ' + animation);
-    }
-  );
-
-  //$window.on('resize',  function () {
-  //  verifyMedia();
-  //});
-});

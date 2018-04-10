@@ -1,41 +1,41 @@
 .Pagination {
   margin: 2rem 0;
 }
-.Pagination__list {
-  .page-link {
-    border-color: $borderColor;
-    color: $darkColor;
-  }
-  .page-item {
+ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
+    list-style: none;
     margin-right: 1rem;
-    &:first-child, &:last-child {
-      .page-link {
-        border: none;
-        border-radius: 0;
-        font-size: 2rem;
-        padding: 0;
-      }
-    }
     &:last-child {
       margin-right: 0;
     }
-    &.active {
-      .page-link {
-        background-color: $firstColor;
-        border-color: $firstColor;
-        color: white;
-      }
-    }
     &:focus, &:hover {
-      .page-link {
+      a.page-numbers, span.page-numbers {
         background-color: $firstColor;
         border-color: $firstColor;
         color: white;
       }
     }
-    &.disabled {
-      .page-link {
-      }
-    }
+  }
+}
+a.page-numbers, span.page-numbers {
+  border: 1px solid $borderColor;
+  color: $darkColor;
+  display: block;
+  padding: .5rem .8rem;
+  &.prev, &.next {
+    border: none;
+    border-radius: 0;
+    font-size: 2rem;
+    line-height: 1.3;
+    padding: 0;
+  }
+  &.current {
+    background-color: $firstColor;
+    border-color: $firstColor;
+    color: white;
   }
 }
