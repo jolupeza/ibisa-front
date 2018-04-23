@@ -67,6 +67,10 @@
     .Card__posts__figure, .Card__posts__info {
       width: 100%;
     }
+    .Card__posts__figure {
+      background-color: $thirdColor;
+      min-height: 15rem;
+    }
   }
 }
 .Card__posts__figure, .Card__posts__info {

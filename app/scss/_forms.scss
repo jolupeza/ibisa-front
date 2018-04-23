@@ -1,6 +1,44 @@
 .Form {
 }
 .Form__group {
+  position: relative;
+  &.has-feedback {
+    &.has-error {
+      .Form__control {
+        border-color: var(--danger);
+      }
+      .help-block {
+        color: var(--danger);
+      }
+      .form-control-feedback {
+        color: var(--danger);
+      }
+    }
+    &.has-success {
+      .Form__control {
+        border-color: var(--success);
+      }
+      .form-control-feedback {
+        color: var(--success);
+      }
+    }
+    .form-control-feedback {
+      align-items: center;
+      display: flex;
+      height: 50px;
+      font-size: 1.5em;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+    }
+    select.Form__control {
+      + .form-control-feedback {
+        right: 30px;
+      }
+    }
+  }
 }
 .Form__label {
   &--check {
