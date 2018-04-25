@@ -26,6 +26,10 @@ function verifyMedia () {
       checkScrollHeader();
     });
 
+    checkScrollHeader();
+
+    activateMultipleCarousel();
+
     $('.ArrowTop').on('click', function (ev) {
       ev.preventDefault();
 
@@ -49,6 +53,10 @@ function verifyMedia () {
       }
     );
 
+    $('#carousel-team').on('slide.bs.carousel', function (e) {
+      loadMultipleCarousel(3, e);
+    });
+
     //$window.on('resize',  function () {
     //  verifyMedia();
     //});
@@ -62,6 +70,37 @@ function verifyMedia () {
       header.addClass('Header--scroll');
     } else {
       header.removeClass('Header--scroll');
+    }
+  }
+
+  function loadMultipleCarousel (item, event) {
+    var $e = $(event.relatedTarget),
+        idx = $e.index(),
+        itemsPerSlide = item,
+        totalItems = $('.carousel-item').length;
+
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        if (event.direction == "left") {
+          $('.carousel-item').eq(i).appendTo('.carousel-inner');
+        } else {
+          $('.carousel-item').eq(0).appendTo('.carousel-inner');
+        }
+      }
+    }
+  }
+
+  function activateMultipleCarousel () {
+    var carousel = $('.Carousel--multiple'),
+        idCarousel = carousel.attr('id'),
+        numSlides = carousel.data('numslides'),
+        totalSlides = carousel.find('.carousel-item').length;
+
+    if (totalSlides > numSlides) {
+      $('#'+idCarousel).carousel({
+        interval: 4000
+      });
     }
   }
 })(jQuery);
