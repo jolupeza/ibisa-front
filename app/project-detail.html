@@ -6,6 +6,10 @@
   <title>Inmobiliaria Bellas Islas S.A.</title>
 
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    var players = new Array(),
+        playerInfoList = [];
+  </script>
 </head>
 <body class="single-projects">
   <header class="Header">
@@ -47,8 +51,20 @@
         <article class="Page__project">
           <div class="row">
             <div class="col-6">
-              <figure class="Page__project__figure">
-                <img src="images/project-medium.jpg" alt="Project detail" class="img-fluid d-block m-auto" />
+              <figure class="Page__project__figure Page__project__figure--video embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive-item" id="player-1"></div>
+                <script>
+                  var height = '360',
+                      width = '640';
+
+                  playerInfoList.push({
+                    id: '1',
+                    idPlayer: 'player-1',
+                    height: height,
+                    width: width,
+                    videoId: 'QAJTVdWPuec',
+                  });
+                </script>
               </figure>
               <figure class="Page__project__figure mb-0">
                 <img src="images/project-medium.jpg" alt="Project detail" class="img-fluid d-block m-auto" />

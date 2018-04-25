@@ -47,8 +47,8 @@ gulp.task('style', () => {
 gulp.task('concat', () => {
   return gulp.src([
     //config.jsDir + '/start.js',
+    config.jsDir + '/youtube.js',
     config.jsDir + '/main.js',
-    //config.jsDir + '/end.js'
   ])
   .pipe(concat('script.js'))
   .pipe(gulp.dest(config.jsDir))
