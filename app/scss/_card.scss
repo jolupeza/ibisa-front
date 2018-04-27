@@ -26,6 +26,11 @@
     width: 90%;
     .Card__title {
       color: $secondColor;
+      a {
+        &:focus, &:hover {
+          color: lighten($secondColor, 10%);
+        }
+      }
     }
     .Card__text {
       color: white;
