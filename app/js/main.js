@@ -57,6 +57,17 @@ function verifyMedia () {
       loadMultipleCarousel(3, e);
     });
 
+    $('.js-sidebar-toggle').on('click', function () {
+      var $this = $(this),
+          sidebar = $('.Sidebar');
+
+      if (sidebar.hasClass('active')) {
+        sidebar.removeClass('active');
+      } else {
+        sidebar.addClass('active');
+      }
+    });
+
     //$window.on('resize',  function () {
     //  verifyMedia();
     //});

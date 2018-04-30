@@ -15,14 +15,14 @@
   <header class="Header">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-6 col-lg-3">
           <h1 class="Header__logo">
             <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="./images/logo-ibisa.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-lg-9">
           <nav class="Header__nav">
             <ul class="Header__list">
               <li><a href="index.html">Inicio</a></li>
@@ -33,13 +33,36 @@
             </ul>
           </nav>
         </div>
+        <div class="col-6 d-lg-none">
+          <aside class="Header__bars text-right js-sidebar-toggle">
+            <i class="icon-bars"></i>
+          </aside>
+        </div>
       </div>
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <div class="Sidebar__close js-sidebar-toggle">
+      <i class="icon-close"></i>
+    </div>
+    <nav class="Header__nav">
+      <ul class="Header__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li class="active"><a href="contact.html">Contáctanos</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Page">
     <figure class="Page__figure">
-      <img src="images/contact-page.jpg" alt="Detalle noticia" class="img-fluid d-block m-auto">
+      <picture>
+        <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/about-responsive.jpg" />
+        <img src="images/contact-page.jpg" alt="Detalle noticia" class="img-fluid d-block m-auto">
+      </picture>
 
       <header class="Page__header">
         <h2 class="Page__title text-center">Contáctanos</h2>
@@ -48,19 +71,19 @@
 
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-8">
+        <div class="col-lg-8">
           <form action="" class="Form mb-5 fv-form fv-form-bootstrap" novalidate="novalidate">
             <div class="form-row Form__row">
               <div class="form-group col-md-6 Form__group has-feedback has-error">
                 <label for="name" class="Form__label sr-only">Nombre *</label>
                 <input type="text" class="form-control Form__control" name="name" id="name" placeholder="Nombre *">
-                <i class="form-control-feedback icon-map" data-fv-icon-for="name"></i>
+                <i class="form-control-feedback icon-close" data-fv-icon-for="name"></i>
                 <small class="help-block" data-fv-validator="notEmpty" data-fv-for="name" data-fv-result="INVALID">Por favor introduce un valor</small>
               </div>
               <div class="form-group col-md-6 Form__group has-feedback has-success">
                 <label for="email" class="Form__label sr-only">Correo electrónico *</label>
                 <input type="email" class="form-control Form__control" name="email" id="email" placeholder="Correo electrónico *" />
-                <i class="form-control-feedback icon-map" data-fv-icon-for="name"></i>
+                <i class="form-control-feedback icon-check" data-fv-icon-for="name"></i>
               </div>
             </div>
 
@@ -78,7 +101,7 @@
                   <option>Asunto 4</option>
                   <option>Asunto 5</option>
                 </select>
-                <i class="form-control-feedback icon-map"></i>
+                <i class="form-control-feedback icon-close"></i>
                 <small class="help-block">Por favor introduce un valor</small>
               </div>
             </div>
@@ -86,7 +109,7 @@
             <div class="form-group Form__group has-feedback has-error">
               <label for="message" class="Form__label sr-only">Mensaje *</label>
               <textarea class="form-control Form__control" name="message" id="message" rows="8" placeholder="Mensaje *"></textarea>
-              <i class="form-control-feedback icon-map"></i>
+              <i class="form-control-feedback icon-close"></i>
               <small class="help-block">Por favor introduce un valor</small>
             </div>
 
@@ -119,17 +142,17 @@
   <footer class="Footer">
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo">
-            <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
+            <a class="d-block" href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="images/logo-ibisa-white.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
 
-          <h2 class="Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
+          <h2 class="d-none d-lg-block Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magnam nostrum rem recusandae quod dolorum iure non ratione ipsam repellat, eveniet eaque veritatis facilis omnis blanditiis, hic neque placeat ullam?</p>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h2 class="Footer__title text-uppercase whiteColor">Contáctanos</h2>
           <ul class="Footer__list">
             <li>correo@dominio.com</li>
@@ -137,7 +160,7 @@
             <li>Jr. Jirón Av. Avenida 234 - San Miguel</li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h3 class="Footer__title text-uppercase whiteColor">Síguenos en redes</h3>
           <ul class="Footer__social text-center">
             <li>

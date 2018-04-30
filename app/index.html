@@ -15,14 +15,14 @@
   <header class="Header">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-6 col-lg-3">
           <h1 class="Header__logo">
             <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="./images/logo-ibisa.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-lg-9">
           <nav class="Header__nav">
             <ul class="Header__list">
               <li class="active"><a href="index.html">Inicio</a></li>
@@ -33,9 +33,29 @@
             </ul>
           </nav>
         </div>
+        <div class="col-6 d-lg-none">
+          <aside class="Header__bars text-right js-sidebar-toggle">
+            <i class="icon-bars"></i>
+          </aside>
+        </div>
       </div>
     </div>
   </header>
+
+  <aside class="Sidebar">
+    <div class="Sidebar__close js-sidebar-toggle">
+      <i class="icon-close"></i>
+    </div>
+    <nav class="Header__nav">
+      <ul class="Header__list">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="contact.html">Contáctanos</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+      </ul>
+    </nav>
+  </aside>
 
   <section class="Video">
     <img src="images/video-home.jpg" alt="Inmobiliaria Bellas Islas S.A." class="img-fluid d-block">
@@ -44,10 +64,10 @@
   <section class="Page mt-5 mb-5">
     <div class="container">
       <div class="row">
-        <div class="col-4">
-          <article class="Card">
+        <div class="col-lg-4">
+          <article class="Card mb-4 m-lg-0">
             <figure class="Card__figure">
-              <img src="images/about.jpg" alt="About 1" class="img-fluid d-block" />
+              <img src="images/about.jpg" alt="About 1" class="img-fluid d-block m-auto" />
             </figure>
             <div class="Card__info">
               <h3 class="Card__title text-center text-uppercase">Espacio ideal</h3>
@@ -57,10 +77,10 @@
             </div>
           </article>
         </div>
-        <div class="col-4">
-          <article class="Card">
+        <div class="col-lg-4">
+          <article class="Card mb-4 m-lg-0">
             <figure class="Card__figure">
-              <img src="images/about-02.jpg" alt="About 2" class="img-fluid d-block" />
+              <img src="images/about-02.jpg" alt="About 2" class="img-fluid d-block m-auto" />
             </figure>
             <div class="Card__info">
               <h3 class="Card__title text-center text-uppercase">Áreas de confort</h3>
@@ -70,10 +90,10 @@
             </div>
           </article>
         </div>
-        <div class="col-4">
-          <article class="Card">
+        <div class="col-lg-4">
+          <article class="Card mb-4 m-lg-0">
             <figure class="Card__figure">
-              <img src="images/about-03.jpg" alt="About 3" class="img-fluid d-block" />
+              <img src="images/about-03.jpg" alt="About 3" class="img-fluid d-block m-auto" />
             </figure>
             <div class="Card__info">
               <h3 class="Card__title text-center text-uppercase">Atractivo panorama</h3>
@@ -90,14 +110,14 @@
   <section class="Page">
     <h2 class="Page__title Page__title--bgc text-center mb-0">Nuestros Proyectos</h2>
     <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <article class="Card Card--hover">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-lg-4">
+          <article class="Card Card--hover mb-4 mb-lg-0">
             <figure class="Card__figure Card__figure--hover mb-0">
-              <img src="images/project-thumb.jpg" alt="Proyecto 01" class="img-fluid d-block" />
+              <img src="images/project-thumb.jpg" alt="Proyecto 01" class="img-fluid d-block m-auto" />
 
               <aside class="Card__info Card__info--hover">
-                <h3 class="Card__title text-uppercase h2">Bellas Islas</h3>
+                <h3 class="Card__title text-uppercase h2"><a href="#">Bellas Islas</a></h3>
                 <div class="Card__text">
                   <p>Lorem ipsum dolor sit amet, consectetur.</p>
                 </div>
@@ -105,13 +125,13 @@
             </figure>
           </article>
         </div>
-        <div class="col-4">
-          <article class="Card Card--hover">
+        <div class="col-sm-6 col-lg-4">
+          <article class="Card Card--hover mb-4 mb-lg-0">
             <figure class="Card__figure Card__figure--hover mb-0">
-              <img src="images/project-thumb.jpg" alt="Proyecto 02" class="img-fluid d-block" />
+              <img src="images/project-thumb.jpg" alt="Proyecto 02" class="img-fluid d-block m-auto" />
 
               <aside class="Card__info Card__info--hover">
-                <h3 class="Card__title text-uppercase h2">Bellas Islas</h3>
+                <h3 class="Card__title text-uppercase h2"><a href="#">Bellas Islas</a></h3>
                 <div class="Card__text">
                   <p>Lorem ipsum dolor sit amet, consectetur.</p>
                 </div>
@@ -119,13 +139,13 @@
             </figure>
           </article>
         </div>
-        <div class="col-4">
-          <article class="Card Card--hover">
+        <div class="col-sm-6 col-lg-4">
+          <article class="Card Card--hover mb-4 mb-lg-0">
             <figure class="Card__figure Card__figure--hover mb-0">
-              <img src="images/project-thumb.jpg" alt="Proyecto 03" class="img-fluid d-block" />
+              <img src="images/project-thumb.jpg" alt="Proyecto 03" class="img-fluid d-block m-auto" />
 
               <aside class="Card__info Card__info--hover">
-                <h3 class="Card__title text-uppercase h2">Bellas Islas</h3>
+                <h3 class="Card__title text-uppercase h2"><a href="#">Bellas Islas</a></h3>
                 <div class="Card__text">
                   <p>Lorem ipsum dolor sit amet, consectetur.</p>
                 </div>
@@ -141,8 +161,8 @@
     <div class="container">
       <h2 class="Page__title text-center">¿Qué ofrecemos?</h2>
 
-      <div class="row">
-        <div class="col-4">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-lg-4">
           <article class="Card">
             <figure class="Card__figure">
               <img src="images/lock.png" alt="Service 1" class="img-fluid d-block m-auto element-animate" data-animation="rotateIn" />
@@ -150,12 +170,12 @@
             <div class="Card__info">
               <h3 class="Card__title text-center text-uppercase">Seguridad</h3>
               <div class="Card__text text-center">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, est eos minus porro voluptatum sapiente earum ipsum qui facilis eum sunt in nesciunt debitis. Saepe molestias impedit nihil deleniti eaque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione.</p>
               </div>
             </div>
           </article>
         </div>
-        <div class="col-4">
+        <div class="col-sm-6 col-lg-4">
           <article class="Card">
             <figure class="Card__figure">
               <img src="images/imagine.png" alt="Service 2" class="img-fluid d-block m-auto element-animate" data-animation="rotateIn" />
@@ -163,12 +183,12 @@
             <div class="Card__info">
               <h3 class="Card__title text-center text-uppercase">Seguridad</h3>
               <div class="Card__text text-center">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, est eos minus porro voluptatum sapiente earum ipsum qui facilis eum sunt in nesciunt debitis. Saepe molestias impedit nihil deleniti eaque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione.</p>
               </div>
             </div>
           </article>
         </div>
-        <div class="col-4">
+        <div class="col-sm-6 col-lg-4">
           <article class="Card">
             <figure class="Card__figure">
               <img src="images/clock.png" alt="Service 3" class="img-fluid d-block m-auto  element-animate" data-animation="rotateIn" />
@@ -176,7 +196,7 @@
             <div class="Card__info">
               <h3 class="Card__title text-center text-uppercase">Seguridad</h3>
               <div class="Card__text text-center">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, est eos minus porro voluptatum sapiente earum ipsum qui facilis eum sunt in nesciunt debitis. Saepe molestias impedit nihil deleniti eaque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione.</p>
               </div>
             </div>
           </article>
@@ -190,7 +210,7 @@
       <h2 class="Page__title text-center">Últimas noticias</h2>
 
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6">
           <article class="Card__posts Card__posts--feature">
             <figure class="Card__posts__figure">
               <img src="images/post-medium.jpg" alt="Post 02" class="img-fluid d-block m-auto" />
@@ -205,9 +225,9 @@
           </article>
         </div>
 
-        <div class="col-6">
-          <article class="Card__posts mb-2">
-            <figure class="Card__posts__figure mb-0">
+        <div class="col-lg-6">
+          <article class="Card__posts mb-4 mb-lg-2">
+            <figure class="Card__posts__figure mb-2 mb-md-0">
               <img src="images/post-thumb.jpg" alt="Post 02" class="img-fluid d-block m-auto" />
             </figure>
             <div class="Card__posts__info">
@@ -219,8 +239,8 @@
             </div>
           </article>
 
-          <article class="Card__posts mb-2">
-            <figure class="Card__posts__figure mb-0">
+          <article class="Card__posts mb-4 mb-lg-2">
+            <figure class="Card__posts__figure mb-2 mb-md-0">
               <img src="images/post-thumb.jpg" alt="Post 02" class="img-fluid d-block m-auto" />
             </figure>
             <div class="Card__posts__info">
@@ -232,8 +252,8 @@
             </div>
           </article>
 
-          <article class="Card__posts mb-2">
-            <figure class="Card__posts__figure mb-0">
+          <article class="Card__posts mb-4 mb-lg-2">
+            <figure class="Card__posts__figure mb-2 mb-md-0">
               <img src="images/post-thumb.jpg" alt="Post 02" class="img-fluid d-block m-auto" />
             </figure>
             <div class="Card__posts__info">
@@ -254,7 +274,7 @@
       <h2 class="Page__title text-center">Contáctate con nosotros</h2>
 
       <div class="row justify-content-center">
-        <div class="col-8">
+        <div class="col-lg-8">
           <form action="" class="Form mb-5">
             <div class="form-row Form__row">
               <div class="form-group col-md-6 Form__group">
@@ -315,17 +335,17 @@
   <footer class="Footer">
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo">
-            <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
+            <a class="d-block" href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="images/logo-ibisa-white.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
 
-          <h2 class="Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
+          <h2 class="d-none d-lg-block Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magnam nostrum rem recusandae quod dolorum iure non ratione ipsam repellat, eveniet eaque veritatis facilis omnis blanditiis, hic neque placeat ullam?</p>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h2 class="Footer__title text-uppercase whiteColor">Contáctanos</h2>
           <ul class="Footer__list">
             <li>correo@dominio.com</li>
@@ -333,7 +353,7 @@
             <li>Jr. Jirón Av. Avenida 234 - San Miguel</li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h3 class="Footer__title text-uppercase whiteColor">Síguenos en redes</h3>
           <ul class="Footer__social text-center">
             <li>

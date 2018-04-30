@@ -15,14 +15,14 @@
   <header class="Header">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-6 col-lg-3">
           <h1 class="Header__logo">
             <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="./images/logo-ibisa.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-lg-9">
           <nav class="Header__nav">
             <ul class="Header__list">
               <li><a href="index.html">Inicio</a></li>
@@ -33,13 +33,36 @@
             </ul>
           </nav>
         </div>
+        <div class="col-6 d-lg-none">
+          <aside class="Header__bars text-right js-sidebar-toggle">
+            <i class="icon-bars"></i>
+          </aside>
+        </div>
       </div>
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <div class="Sidebar__close js-sidebar-toggle">
+      <i class="icon-close"></i>
+    </div>
+    <nav class="Header__nav">
+      <ul class="Header__list">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="contact.html">Contáctanos</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Page">
     <figure class="Page__figure">
-      <img src="images/project-page.jpg" alt="Proyetos" class="img-fluid d-block m-auto">
+      <picture>
+        <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/about-responsive.jpg" />
+        <img src="images/project-page.jpg" alt="Proyectos" class="img-fluid d-block m-auto">
+      </picture>
 
       <header class="Page__header">
         <h2 class="Page__title text-center">Proyectos</h2>
@@ -49,7 +72,7 @@
     <div class="container">
       <section class="Page__subpage">
         <div class="row">
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card mb-3">
               <figure class="Card__figure">
                 <img src="images/project-thumb.jpg" alt="Project 1" class="img-fluid d-block m-auto" />
@@ -66,7 +89,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card mb-3">
               <figure class="Card__figure">
                 <img src="images/project-thumb.jpg" alt="Project 1" class="img-fluid d-block m-auto" />
@@ -83,7 +106,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card mb-3">
               <figure class="Card__figure">
                 <img src="images/project-thumb.jpg" alt="Project 1" class="img-fluid d-block m-auto" />
@@ -100,7 +123,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card mb-3">
               <figure class="Card__figure">
                 <img src="images/project-thumb.jpg" alt="Project 1" class="img-fluid d-block m-auto" />
@@ -117,7 +140,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card mb-3">
               <figure class="Card__figure">
                 <img src="images/project-thumb.jpg" alt="Project 1" class="img-fluid d-block m-auto" />
@@ -134,7 +157,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card mb-3">
               <figure class="Card__figure">
                 <img src="images/project-thumb.jpg" alt="Project 1" class="img-fluid d-block m-auto" />
@@ -159,17 +182,17 @@
   <footer class="Footer">
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo">
-            <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
+            <a class="d-block" href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="images/logo-ibisa-white.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
 
-          <h2 class="Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
+          <h2 class="d-none d-lg-block Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magnam nostrum rem recusandae quod dolorum iure non ratione ipsam repellat, eveniet eaque veritatis facilis omnis blanditiis, hic neque placeat ullam?</p>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h2 class="Footer__title text-uppercase whiteColor">Contáctanos</h2>
           <ul class="Footer__list">
             <li>correo@dominio.com</li>
@@ -177,7 +200,7 @@
             <li>Jr. Jirón Av. Avenida 234 - San Miguel</li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h3 class="Footer__title text-uppercase whiteColor">Síguenos en redes</h3>
           <ul class="Footer__social text-center">
             <li>
