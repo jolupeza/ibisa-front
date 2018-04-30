@@ -3,6 +3,7 @@ body {
   color: $textColor;
   font-family: $openSans;
   font-size: 16px;
+  position: relative;
   &.admin-bar {
     .Header {
       top: 32px;

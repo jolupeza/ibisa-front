@@ -5,6 +5,22 @@
   p {
     color: white;
     font-size: 1rem;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+.Footer__logo {
+  img {
+    @media screen and (max-width: 991px) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.Footer__title {
+  @media screen and (max-width: 1199px) {
+    font-size: 1.5rem;
   }
 }
 .Footer__list {

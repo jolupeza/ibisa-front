@@ -15,14 +15,14 @@
   <header class="Header">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-6 col-lg-3">
           <h1 class="Header__logo">
             <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="./images/logo-ibisa.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-lg-9">
           <nav class="Header__nav">
             <ul class="Header__list">
               <li><a href="index.html">Inicio</a></li>
@@ -33,13 +33,36 @@
             </ul>
           </nav>
         </div>
+        <div class="col-6 d-lg-none">
+          <aside class="Header__bars text-right js-sidebar-toggle">
+            <i class="icon-bars"></i>
+          </aside>
+        </div>
       </div>
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <div class="Sidebar__close js-sidebar-toggle">
+      <i class="icon-close"></i>
+    </div>
+    <nav class="Header__nav">
+      <ul class="Header__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="active"><a href="about.html">Nosotros</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="contact.html">Contáctanos</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Page">
     <figure class="Page__figure">
-      <img src="images/about-page.jpg" alt="Nosotros" class="img-fluid d-block m-auto">
+      <picture>
+        <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/about-responsive.jpg" />
+        <img src="images/about-page.jpg" alt="Nosotros" class="img-fluid d-block m-auto" />
+      </picture>
 
       <header class="Page__header">
         <h2 class="Page__title text-center">Nosotros</h2>
@@ -55,8 +78,8 @@
       <section class="Page__subpage">
         <h2 class="Page__title text-center">¿Qué ofrecemos?</h2>
 
-        <div class="row">
-          <div class="col-4">
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card">
               <figure class="Card__figure">
                 <img src="images/lock.png" alt="Service 1" class="img-fluid d-block m-auto element-animate" data-animation="rotateIn" />
@@ -69,7 +92,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card">
               <figure class="Card__figure">
                 <img src="images/imagine.png" alt="Service 2" class="img-fluid d-block m-auto element-animate" data-animation="rotateIn" />
@@ -82,7 +105,7 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-sm-6 col-lg-4">
             <article class="Card">
               <figure class="Card__figure">
                 <img src="images/clock.png" alt="Service 3" class="img-fluid d-block m-auto element-animate" data-animation="rotateIn" />
@@ -103,7 +126,7 @@
 
         <div id="carousel-team" class="carousel slide Carousel Carousel--multiple Carousel--multiple--3" data-numslides="3">
           <div class="carousel-inner w-100 mx-auto" role="listbox">
-            <div class="carousel-item col-md-4 active">
+            <div class="carousel-item col-md-6 col-lg-4 active">
               <article class="Card">
                 <figure class="Card__figure mb-0">
                   <img src="images/team.jpg" alt="Mario Casas" class="img-fluid d-block m-auto" />
@@ -114,7 +137,7 @@
                 </div>
               </article>
             </div>
-            <div class="carousel-item col-md-4">
+            <div class="carousel-item col-md-6 col-lg-4">
               <article class="Card">
                 <figure class="Card__figure mb-0">
                   <img src="images/team.jpg" alt="Mario Casas" class="img-fluid d-block m-auto" />
@@ -125,7 +148,7 @@
                 </div>
               </article>
             </div>
-            <div class="carousel-item col-md-4">
+            <div class="carousel-item col-md-6 col-lg-4">
               <article class="Card">
                 <figure class="Card__figure mb-0">
                   <img src="images/team.jpg" alt="Mario Casas" class="img-fluid d-block m-auto" />
@@ -136,7 +159,7 @@
                 </div>
               </article>
             </div>
-            <div class="carousel-item col-md-4">
+            <div class="carousel-item col-md-6 col-lg-4">
               <article class="Card">
                 <figure class="Card__figure mb-0">
                   <img src="images/team.jpg" alt="Mario Casas" class="img-fluid d-block m-auto" />
@@ -147,19 +170,6 @@
                 </div>
               </article>
             </div>
-            <!--
-            <div class="carousel-item col-md-4">
-              <article class="Card">
-                <figure class="Card__figure mb-0">
-                  <img src="images/team.jpg" alt="Mario Casas" class="img-fluid d-block m-auto" />
-                </figure>
-                <div class="Card__info Card__info--bg">
-                  <h3 class="Card__title text-center text-uppercase h2">Luis Pérez</h3>
-                  <h4 class="Card__subtitle text-center h3">Gerente General</h4>
-                </div>
-              </article>
-            </div>
-          -->
           </div>
           <a class="carousel-control-prev" href="#carousel-team" role="button" data-slide="prev">
             <i class="icon-keyboard_arrow_left" aria-hidden="true"></i>
@@ -177,17 +187,17 @@
   <footer class="Footer">
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo">
-            <a href="index.html" title="Inmobiliaria Bellas Islas S.A.">
+            <a class="d-block" href="index.html" title="Inmobiliaria Bellas Islas S.A.">
               <img class="img-fluid" src="images/logo-ibisa-white.png" alt="Inmobiliaria Bellas Islas S.A." />
             </a>
           </h1>
 
-          <h2 class="Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
+          <h2 class="d-none d-lg-block Footer__title text-uppercase whiteColor">Sobre Nosotros</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magnam nostrum rem recusandae quod dolorum iure non ratione ipsam repellat, eveniet eaque veritatis facilis omnis blanditiis, hic neque placeat ullam?</p>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h2 class="Footer__title text-uppercase whiteColor">Contáctanos</h2>
           <ul class="Footer__list">
             <li>correo@dominio.com</li>
@@ -195,7 +205,7 @@
             <li>Jr. Jirón Av. Avenida 234 - San Miguel</li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <h3 class="Footer__title text-uppercase whiteColor">Síguenos en redes</h3>
           <ul class="Footer__social text-center">
             <li>
