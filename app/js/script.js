@@ -15,7 +15,7 @@ function onYouTubeIframeAPIReady() {
   }
 }
 
-function createPlayer (playerInfo) {
+function createPlayer(playerInfo) {
   return new YT.Player(playerInfo.idPlayer, {
     height: playerInfo.height,
     width: playerInfo.width,
@@ -71,11 +71,8 @@ function resizeVideo(width, height) {
 }
 
 ;(function ($) {
-  $(function () {
-
-  });
+  $(function () {});
 })(jQuery);
-
 "use strict";
 
 /*******************************************************
@@ -95,7 +92,7 @@ function verifyMedia () {
     $window.on('scroll', function () {
       var arrow = $('.ArrowTop');
 
-      if ( $(this).scrollTop() > 150 ) {
+      if ($(this).scrollTop() > 150) {
         arrow.fadeIn();
       } else {
         arrow.fadeOut();
@@ -111,25 +108,22 @@ function verifyMedia () {
     $('.ArrowTop').on('click', function (ev) {
       ev.preventDefault();
 
-      $('html, body').animate({scrollTop: 0}, 800);
+      $('html, body').animate({ scrollTop: 0 }, 800);
     });
 
-    $('.element-animate').hover(
-      function () {
-        var $this = $(this),
-            animation = $this.data('animation'),
-            parent = $this.parent();
+    $('.element-animate').hover(function () {
+      var $this = $(this),
+          animation = $this.data('animation'),
+          parent = $this.parent();
 
-        parent.addClass('animated ' + animation);
-      },
-      function () {
-        var $this = $(this),
-            animation = $this.data('animation'),
-            parent = $this.parent();
+      parent.addClass('animated ' + animation);
+    }, function () {
+      var $this = $(this),
+          animation = $this.data('animation'),
+          parent = $this.parent();
 
-        parent.removeClass('animated ' + animation);
-      }
-    );
+      parent.removeClass('animated ' + animation);
+    });
 
     $('#carousel-team').on('slide.bs.carousel', function (e) {
       loadMultipleCarousel(3, e);
@@ -151,7 +145,7 @@ function verifyMedia () {
     //});
   });
 
-  function checkScrollHeader () {
+  function checkScrollHeader() {
     var minScroll = 50,
         header = $('.Header');
 
@@ -162,13 +156,13 @@ function verifyMedia () {
     }
   }
 
-  function loadMultipleCarousel (item, event) {
+  function loadMultipleCarousel(item, event) {
     var $e = $(event.relatedTarget),
         idx = $e.index(),
         itemsPerSlide = item,
         totalItems = $('.carousel-item').length;
 
-    if (idx >= totalItems-(itemsPerSlide-1)) {
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
       var it = itemsPerSlide - (totalItems - idx);
       for (var i = 0; i < it; i++) {
         if (event.direction == "left") {
@@ -180,17 +174,17 @@ function verifyMedia () {
     }
   }
 
-  function activateMultipleCarousel () {
+  function activateMultipleCarousel() {
     var carousel = $('.Carousel--multiple'),
         idCarousel = carousel.attr('id'),
         numSlides = carousel.data('numslides'),
         totalSlides = carousel.find('.carousel-item').length;
 
     if (totalSlides > numSlides) {
-      $('#'+idCarousel).carousel({
+      $('#' + idCarousel).carousel({
         interval: 4000
       });
     }
   }
 })(jQuery);
-
+//# sourceMappingURL=script.js.map

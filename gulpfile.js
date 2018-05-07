@@ -5,6 +5,7 @@ const gulp = require('gulp'),
       cssnano = require('gulp-cssnano'),
       argv = require('yargs').argv,
       gulpIf = require('gulp-if'),
+      babel = require('gulp-babel'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
       imagemin = require('gulp-imagemin'),
@@ -50,7 +51,12 @@ gulp.task('concat', () => {
     config.jsDir + '/youtube.js',
     config.jsDir + '/main.js',
   ])
+  .pipe(sourcemaps.init())
+  .pipe(babel({
+      presets: ['env']
+    }))
   .pipe(concat('script.js'))
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(config.jsDir))
 });
 

@@ -7,10 +7,24 @@
   z-index: 9;
   &--black {
     background-color: rgba(black, .3);
+    .Header__list {
+      li {
+        a {
+          color: white;
+        }
+      }
+    }
   }
   &--scroll {
     background-color: rgba(black, .3);
     padding: .3rem 0;
+    .Header__list {
+      li {
+        a {
+          color: white;
+        }
+      }
+    }
   }
   @media screen and (max-width: 991px) {
     padding: .5rem 0;
@@ -46,7 +60,7 @@
       margin-right: 0;
     }
     a {
-      color: white;
+      color: $blackColor;
       &:focus, &:hover {
         color: $secondColor;
         text-decoration: none;

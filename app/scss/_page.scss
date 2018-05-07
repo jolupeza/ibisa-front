@@ -1,14 +1,48 @@
+.Page {
+  &--bg {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    &--phrase {
+      background-image: url('./../images/bg-phrase.png');
+      padding: 5rem 0;
+    }
+  }
+}
+.Page__phrase {
+  h2 {
+    color: $blackColor;
+    font-size: 3rem;
+    strong {
+      background: transparent url('./../images/separator-big.png') 100% 100% no-repeat;
+      background-size: contain;
+      font-weight: 700;
+      padding-bottom: .5em;
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 2.5rem;
+    }
+  }
+}
+.Page__phrase__logo {
+  margin-right: 20%;
+  margin-top: 3rem;
+  @media screen and (max-width: 1700px) {
+    margin-right: 5%;
+  }
+}
 .Page__title {
   color: $firstColor;
-  font-size: 3.75rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 3rem;
+  text-transform: uppercase;
   &::after {
     background: transparent url('./../images/separator.png') center 0 no-repeat;
     content: "";
     display: block;
     height: 13px;
-    margin: 0 auto;
+    margin: .5rem auto 0;
     width: 133px;
   }
   &--bgc {

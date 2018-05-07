@@ -7,11 +7,11 @@
 .Card__figure {
   &--hover {
     position: relative;
-    &:hover {
+    /*&:hover {
       .Card__info--hover {
         right: 0;
       }
-    }
+    }*/
   }
 }
 .Card__info {
@@ -20,7 +20,7 @@
     overflow: hidden;
     padding: .8rem;
     position: absolute;
-    right: -90%;
+    right: 0;
     top: 50%;
     transition: right .3s ease-out;
     width: 90%;
