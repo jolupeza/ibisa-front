@@ -49,6 +49,7 @@ gulp.task('concat', () => {
   return gulp.src([
     //config.jsDir + '/start.js',
     config.jsDir + '/youtube.js',
+    config.jsDir + '/maps.js',
     config.jsDir + '/main.js',
   ])
   .pipe(sourcemaps.init())
@@ -102,7 +103,7 @@ gulp.task('js-sync', ['compress'], () => {
 gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
     proxy: "ibisa.front",
-    browser: "google-chrome"
+    browser: "chrome"
     //browser: ["chrome", "firefox", "google-chrome"]
   });
 

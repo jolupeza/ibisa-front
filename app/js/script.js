@@ -73,6 +73,48 @@ function resizeVideo(width, height) {
 ;(function ($) {
   $(function () {});
 })(jQuery);
+'use strict';
+
+function initMap() {
+  if (!infoMaps.length) {
+    return false;
+  }
+
+  var mapCoord = { lat: -25.363, lng: 131.044 },
+      options = {
+    zoom: 14,
+    center: mapCoord,
+    scrollwheel: false
+  };
+
+  infoMaps[0].map = new google.maps.Map(document.getElementById(infoMaps[0].id), options);
+
+  infoMaps[0].marker = new google.maps.Marker({
+    position: mapCoord,
+    map: infoMaps[0].map,
+    title: 'Bellas Islas'
+  });
+
+  infoMaps[0].load = true;
+}
+
+;(function ($) {
+  var $window = $(window);
+
+  $(function () {
+    $window.on('resize', function () {
+      if (infoMaps.length) {
+
+        infoMaps.forEach(function (info) {
+          if (!$.isEmptyObject(info.map)) {
+            google.maps.event.trigger(info.map, "resize");
+            info.map.setCenter({ lat: info.lat, lng: info.long });
+          }
+        });
+      }
+    });
+  });
+})(jQuery);
 "use strict";
 
 /*******************************************************
@@ -90,18 +132,14 @@ function verifyMedia () {
 
   $(function () {
     $window.on('scroll', function () {
-      var arrow = $('.ArrowTop');
-
-      if ($(this).scrollTop() > 150) {
-        arrow.fadeIn();
-      } else {
-        arrow.fadeOut();
-      }
+      enabledArrowTop();
 
       checkScrollHeader();
     });
 
     checkScrollHeader();
+
+    enabledArrowTop();
 
     activateMultipleCarousel();
 
@@ -138,6 +176,17 @@ function verifyMedia () {
       } else {
         sidebar.addClass('active');
       }
+    });
+
+    $('.Goto').on('click', function (e) {
+      e.preventDefault();
+
+      var $this = $(e.target),
+          href = $this.attr('href');
+
+      $('html, body').stop().animate({
+        scrollTop: $(href).offset().top - 100
+      }, 2000);
     });
 
     //$window.on('resize',  function () {
@@ -186,5 +235,15 @@ function verifyMedia () {
       });
     }
   }
+
+  var enabledArrowTop = function enabledArrowTop() {
+    var arrow = $('.ArrowTop');
+
+    if ($window.scrollTop() > 150) {
+      arrow.fadeIn();
+    } else {
+      arrow.fadeOut();
+    }
+  };
 })(jQuery);
 //# sourceMappingURL=script.js.map

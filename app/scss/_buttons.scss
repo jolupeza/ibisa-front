@@ -65,3 +65,30 @@
     padding: .3rem 1rem
   }
 }
+
+.Goto {
+  background-color: $secondColor;
+  border: none;
+  border-radius: .5rem 0 0 .5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1.25rem;
+  font-weight: 700;
+  padding: .5rem .8rem;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  [class^="icon-"] {
+    font-size: 1.5em;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+  &:focus, &:hover {
+    color: white;
+  }
+  &:hover {
+    transform: scale(1.03);
+  }
+}

@@ -11,22 +11,18 @@ function verifyMedia () {
 /*******************************************************/
 
 ;(function ($) {
-  var $window = $(window);
+  let $window = $(window);
 
   $(function () {
     $window.on('scroll', function () {
-      var arrow = $('.ArrowTop');
-
-      if ( $(this).scrollTop() > 150 ) {
-        arrow.fadeIn();
-      } else {
-        arrow.fadeOut();
-      }
+      enabledArrowTop();
 
       checkScrollHeader();
     });
 
     checkScrollHeader();
+
+    enabledArrowTop();
 
     activateMultipleCarousel();
 
@@ -66,6 +62,17 @@ function verifyMedia () {
       } else {
         sidebar.addClass('active');
       }
+    });
+
+    $('.Goto').on('click', (e) => {
+      e.preventDefault();
+
+      let $this = $(e.target),
+          href = $this.attr('href');
+
+      $('html, body').stop().animate({
+        scrollTop: $(href).offset().top - 100
+      }, 2000);
     });
 
     //$window.on('resize',  function () {
@@ -112,6 +119,16 @@ function verifyMedia () {
       $('#'+idCarousel).carousel({
         interval: 4000
       });
+    }
+  }
+
+  let enabledArrowTop = () => {
+    let arrow = $('.ArrowTop');
+
+    if ( $window.scrollTop() > 150 ) {
+      arrow.fadeIn();
+    } else {
+      arrow.fadeOut();
     }
   }
 })(jQuery);
