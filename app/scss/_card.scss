@@ -17,11 +17,11 @@
 .Card__info {
   &--hover {
     background-color: $firstColor;
+    bottom: 15px;
     overflow: hidden;
     padding: .8rem;
     position: absolute;
     right: 0;
-    top: 50%;
     transition: right .3s ease-out;
     width: 90%;
     .Card__title {
@@ -39,7 +39,6 @@
       color: white;
     }
     @media screen and (max-width: 991px) {
-      bottom: 2rem;
       padding: .5rem;
       right: 0;
       top: auto;
