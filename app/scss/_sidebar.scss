@@ -20,8 +20,10 @@
     justify-content: center;
     height: 100%;
     li {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       margin-right: 0;
+      overflow: hidden;
+      position: relative;
       text-align: center;
       width: 100%;
       &:last-child {
@@ -42,9 +44,21 @@
       }
     }
     .sub-menu {
+      background-color: $thirdColor;
+      display: none;
       position: relative;
+      top: -540%;
+      transition: opacity .3s ease-in, top .2s ease-in;
       &.active {
+        display: block;
         opacity: 1;
+        top: 0;
+      }
+      li {
+        margin-bottom: 1rem;
+        a {
+
+        }
       }
     }
   }

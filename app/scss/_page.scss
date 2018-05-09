@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     &--phrase {
       background-image: url('./../images/bg-phrase.png');
+      background-size: contain;
       padding: 5rem 0;
     }
   }
@@ -12,15 +13,18 @@
 .Page__phrase {
   h2 {
     color: $blackColor;
-    font-size: 3rem;
+    font-size: 3.375rem;
     strong {
       background: transparent url('./../images/separator-big.png') 100% 100% no-repeat;
       background-size: contain;
       font-weight: 700;
       padding-bottom: .5em;
+      @media screen and (max-width: 1199px) {
+        background-image: none;
+      }
     }
-    @media screen and (max-width: 1199px) {
-      font-size: 2.5rem;
+    @media screen and (max-width: 1300px) {
+      font-size: 3rem;
     }
   }
 }
@@ -36,6 +40,7 @@
 }
 .Page__title {
   color: $firstColor;
+  font-size: 2.25rem;
   font-weight: 600;
   margin-bottom: 3rem;
   text-transform: uppercase;

@@ -52,7 +52,7 @@
   padding-left: 0;
   width: 100%;
   li {
-    font-size: 1.5em;
+    font-size: 1.125em;
     list-style: none;
     margin-right: 1.5rem;
     text-transform: uppercase;
@@ -62,19 +62,20 @@
     a {
       color: $blackColor;
       &:focus, &:hover {
-        color: $secondColor;
+        color: $accentColor;
         text-decoration: none;
       }
     }
     &.active, &.current-menu-item, &.current-menu-parent {
+      font-weight: 700;
       a {
-        color: $secondColor;
+        color: $accentColor;
       }
       .sub-menu {
         li {
           &.current-menu-item {
             a {
-              color: $secondColor;
+              color: $accentColor;
             }
           }
         }
@@ -112,7 +113,7 @@
       a {
         color: white;
         &:focus, &:hover {
-          color: $secondColor;
+          color: $accentColor;
         }
       }
     }
