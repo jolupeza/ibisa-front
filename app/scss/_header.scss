@@ -4,7 +4,7 @@
   top: 0;
   transition: padding .2s ease-in, background-color .3s ease-out;
   width: 100%;
-  z-index: 9;
+  z-index: 99;
   &--black {
     background-color: rgba(black, .3);
     .Header__list {
@@ -69,6 +69,51 @@
     &.active, &.current-menu-item, &.current-menu-parent {
       a {
         color: $secondColor;
+      }
+      .sub-menu {
+        li {
+          &.current-menu-item {
+            a {
+              color: $secondColor;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .sub-menu {
+        opacity: 1;
+      }
+    }
+  }
+  .sub-menu {
+    background-color: $firstColor;
+    margin-top: 8px;
+    opacity: 0;
+    padding: .5rem .8rem;
+    position: absolute;
+    transition: opacity .2s ease-in;
+    &::before {
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $firstColor;
+      content: "";
+      display: block;
+      height: 0;
+      position: absolute;
+      top: -8px;
+      width: 0;
+    }
+    li {
+      font-size: 1.25rem;
+      margin-bottom: .8rem;
+      margin-right: 0;
+      width: 100%;
+      a {
+        color: white;
+        &:focus, &:hover {
+          color: $secondColor;
+        }
       }
     }
   }

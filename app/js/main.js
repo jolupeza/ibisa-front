@@ -20,6 +20,8 @@ function verifyMedia () {
       checkScrollHeader();
     });
 
+    checkSidebarSubmenu();
+
     checkScrollHeader();
 
     enabledArrowTop();
@@ -72,7 +74,22 @@ function verifyMedia () {
 
       $('html, body').stop().animate({
         scrollTop: $(href).offset().top - 100
-      }, 2000);
+      }, 600);
+    });
+
+    $('.Header__list__toggle').on('click', (e) => {
+      let $this = $(e.target),
+          submenu = $this.next().next('.sub-menu');
+
+      if ($this.hasClass('icon-keyboard_arrow_down')) {
+        $this.removeClass('icon-keyboard_arrow_down').addClass('icon-keyboard_arrow_up');
+
+        submenu.addClass('active');
+      } else {
+        $this.addClass('icon-keyboard_arrow_down').removeClass('icon-keyboard_arrow_up');
+
+        submenu.removeClass('active');
+      }
     });
 
     //$window.on('resize',  function () {
@@ -130,6 +147,18 @@ function verifyMedia () {
     } else {
       arrow.fadeOut();
     }
+  }
+
+  let checkSidebarSubmenu = () => {
+    let sidebar = $('.Sidebar'),
+        menu = sidebar.find('.Header__list'),
+        liSubmenu = menu.find('li.menu-item-has-children');
+
+    liSubmenu.each((index, element) => {
+      let li = $(element);
+
+      li.prepend('<i class="icon-keyboard_arrow_down Header__list__toggle"></i>');
+    });
   }
 })(jQuery);
 

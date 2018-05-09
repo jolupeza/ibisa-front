@@ -27,6 +27,25 @@
       &:last-child {
         margin-bottom: 0;
       }
+      &.menu-item-has-children {
+
+      }
+      a {
+        color: white;
+      }
+      .Header__list__toggle {
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        z-index: 9;
+      }
+    }
+    .sub-menu {
+      position: relative;
+      &.active {
+        opacity: 1;
+      }
     }
   }
 }

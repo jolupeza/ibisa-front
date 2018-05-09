@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <script>
     var players = new Array(),
-        playerInfoList = [];
+        playerInfoList = [],
+        infoMaps = [];
   </script>
 </head>
 <body>
@@ -27,7 +28,14 @@
             <ul class="Header__list">
               <li class="active"><a href="index.html">Inicio</a></li>
               <li><a href="about.html">Nosotros</a></li>
-              <li><a href="projects.html">Proyectos</a></li>
+              <li>
+                <a href="projects.html">Proyectos</a>
+                <ul class="sub-menu">
+                  <li><a href="project-detail.html">Bellas Islas</a></li>
+                  <li><a href="project-detail.html">Los Robles de San Miguel</a></li>
+                  <li><a href="project-detail.html">DUO Larco 1330</a></li>
+                </ul>
+              </li>
               <li><a href="contact.html">Contáctanos</a></li>
               <li><a href="blog.html">Noticias</a></li>
             </ul>
@@ -50,14 +58,21 @@
       <ul class="Header__list">
         <li class="active"><a href="index.html">Inicio</a></li>
         <li><a href="about.html">Nosotros</a></li>
-        <li><a href="projects.html">Proyectos</a></li>
+        <li class="menu-item-has-children">
+          <a href="projects.html">Proyectos</a>
+          <ul class="sub-menu">
+            <li><a href="project-detail.html">Bellas Islas</a></li>
+            <li><a href="project-detail.html">Los Robles de San Miguel</a></li>
+            <li><a href="project-detail.html">DUO Larco 1330</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contáctanos</a></li>
         <li><a href="blog.html">Noticias</a></li>
       </ul>
     </nav>
   </aside>
 
-  <div id="carouselHome" class="carousel slide Carousel Carousel--home" data-ride="carousel">
+  <div id="carouselHome" class="carousel slide Carousel Carousel--home" data-ride="carousel" data-interval="3000">
     <ol class="carousel-indicators">
       <li data-target="#carouselHome" data-slide-to="0" class="active">Bellas Islas</li>
       <li data-target="#carouselHome" data-slide-to="1">Los Robles de San Miguel</li>
@@ -133,7 +148,7 @@
 
   <section class="Page mt-5 mb-5">
     <div class="container">
-      <h2 class="Page__title text-center">Proyecto Bellas Islas: Departamentos en preventa</h2>
+      <h2 class="h1 Page__title text-center">Proyecto Bellas Islas: Departamentos en preventa</h2>
 
       <div class="row">
         <div class="col-lg-4">
@@ -184,7 +199,7 @@
   </section>
 
   <section class="Page mt-5 mb-5">
-    <h2 class="Page__title text-center">Nuestros Proyectos</h2>
+    <h2 class="h1 Page__title text-center">Nuestros Proyectos</h2>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-sm-6 col-lg-4">
@@ -235,7 +250,7 @@
 
   <section class="Page mt-5 mb-5">
     <div class="container">
-      <h2 class="Page__title text-center">¿Qué ofrecemos?</h2>
+      <h2 class="h1 Page__title text-center">¿Qué ofrecemos?</h2>
 
       <div class="row justify-content-center">
         <div class="col-sm-6 col-lg-4">
@@ -283,7 +298,7 @@
 
   <section class="Page mt-5 mb-5">
     <div class="container">
-      <h2 class="Page__title text-center">Últimas noticias</h2>
+      <h2 class="h1 Page__title text-center">Últimas noticias</h2>
 
       <div class="row">
         <div class="col-lg-6">
@@ -347,7 +362,7 @@
 
   <section class="Page mt-5 mb-5">
     <div class="container">
-      <h2 class="Page__title text-center">Contáctate con nosotros</h2>
+      <h2 class="h1 Page__title text-center">Contáctate con nosotros</h2>
 
       <div class="row justify-content-center">
         <div class="col-lg-8">
