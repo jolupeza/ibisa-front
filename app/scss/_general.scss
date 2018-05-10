@@ -14,7 +14,7 @@ a {
   color: $firstColor;
   transition: color .3s ease-out, background-color .2s ease-in-out;
   &.hover, &:focus, &:hover {
-    color: $secondColor;
+    color: $accentColor;
     text-decoration: none;
   }
 }
@@ -90,6 +90,9 @@ p {
   }
   &.smaller {
     font-size: .875rem;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 1rem;
   }
 }
 li {

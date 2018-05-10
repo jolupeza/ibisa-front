@@ -7,6 +7,9 @@
       background-image: url('./../images/bg-phrase.png');
       background-size: contain;
       padding: 5rem 0;
+      @media screen and (max-width: 767px) {
+        background-size: cover;
+      }
     }
   }
 }
@@ -25,6 +28,9 @@
     }
     @media screen and (max-width: 1300px) {
       font-size: 3rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 2.375rem;
     }
   }
 }
@@ -62,6 +68,9 @@
     @media screen and (max-width: 767px) {
       padding: 1.5rem 0;
     }
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.625rem;
   }
 }
 .Page__subtitle {

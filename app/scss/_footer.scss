@@ -4,7 +4,7 @@
   padding: 1rem 0;
   p {
     color: white;
-    font-size: 1rem;
+    font-size: .875rem;
     @media screen and (max-width: 991px) {
       display: none;
     }
@@ -19,8 +19,9 @@
   }
 }
 .Footer__title {
+  margin-bottom: 1.25rem;
   @media screen and (max-width: 1199px) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 .Footer__list {
@@ -28,6 +29,7 @@
   padding-left: 0;
   li {
     color: white;
+    font-size: .875rem;
     list-style: none;
     margin-bottom: .8em;
   }

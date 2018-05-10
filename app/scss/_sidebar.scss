@@ -7,7 +7,7 @@
   top: 0;
   transition: left .3s ease-out;
   width: 80%;
-  z-index: 99;
+  z-index: 999;
   &.active {
     left: 0;
   }
@@ -34,6 +34,15 @@
       }
       a {
         color: white;
+        &:focus, &:hover {
+          color: $accentColor;
+        }
+      }
+      &.active, &.current-menu-item, &.current-menu-parent {
+        font-weight: 400;
+        a {
+          color: $accentColor;
+        }
       }
       .Header__list__toggle {
         color: white;

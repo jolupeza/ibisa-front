@@ -4,7 +4,7 @@
   top: 0;
   transition: padding .2s ease-in, background-color .3s ease-out;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
   &--black {
     background-color: rgba(black, .3);
     .Header__list {
@@ -120,7 +120,7 @@
   }
 }
 .Header__bars {
-  color: white;
+  color: $firstColor;
   cursor: pointer;
   font-size: 3rem;
   @media screen and (max-width: 576px) {
