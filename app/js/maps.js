@@ -3,9 +3,9 @@ function initMap() {
     return false;
   }
 
-  let mapCoord = {lat: -25.363, lng: 131.044},
+  let mapCoord = {lat: infoMaps[0].lat, lng: infoMaps[0].long},
       options = {
-        zoom: 14,
+        zoom: 16,
         center: mapCoord,
         scrollwheel: false,
       };

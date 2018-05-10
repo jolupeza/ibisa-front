@@ -80,9 +80,9 @@ function initMap() {
     return false;
   }
 
-  var mapCoord = { lat: -25.363, lng: 131.044 },
+  var mapCoord = { lat: infoMaps[0].lat, lng: infoMaps[0].long },
       options = {
-    zoom: 14,
+    zoom: 16,
     center: mapCoord,
     scrollwheel: false
   };
@@ -135,6 +135,10 @@ function verifyMedia () {
       enabledArrowTop();
 
       checkScrollHeader();
+    });
+
+    $window.on('resize', function () {
+      enabledArrowTop();
     });
 
     checkSidebarSubmenu();
@@ -256,10 +260,12 @@ function verifyMedia () {
   var enabledArrowTop = function enabledArrowTop() {
     var arrow = $('.ArrowTop');
 
-    if ($window.scrollTop() > 150) {
-      arrow.fadeIn();
-    } else {
-      arrow.fadeOut();
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      if ($window.scrollTop() > 150) {
+        arrow.fadeIn();
+      } else {
+        arrow.fadeOut();
+      }
     }
   };
 

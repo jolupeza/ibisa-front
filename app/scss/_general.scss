@@ -162,4 +162,7 @@ li {
   &:focus, &:hover {
     background-color: $secondColor;
   }
+  @media screen and (max-width: 991px) {
+    right: -60px
+  }
 }

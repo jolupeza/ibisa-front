@@ -40,7 +40,7 @@
       }
       &.active, &.current-menu-item, &.current-menu-parent {
         font-weight: 400;
-        a {
+        > a {
           color: $accentColor;
         }
       }

@@ -20,6 +20,10 @@ function verifyMedia () {
       checkScrollHeader();
     });
 
+    $window.on('resize', () => {
+      enabledArrowTop();
+    });
+
     checkSidebarSubmenu();
 
     checkScrollHeader();
@@ -142,10 +146,12 @@ function verifyMedia () {
   let enabledArrowTop = () => {
     let arrow = $('.ArrowTop');
 
-    if ( $window.scrollTop() > 150 ) {
-      arrow.fadeIn();
-    } else {
-      arrow.fadeOut();
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      if ( $window.scrollTop() > 150 ) {
+        arrow.fadeIn();
+      } else {
+        arrow.fadeOut();
+      }
     }
   }
 

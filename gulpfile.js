@@ -103,7 +103,7 @@ gulp.task('js-sync', ['compress'], () => {
 gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
     proxy: "ibisa.front",
-    browser: "firefox"
+    browser: "google-chrome"
     //browser: ["chrome", "firefox", "google-chrome"]
   });
 
