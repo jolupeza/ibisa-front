@@ -101,9 +101,19 @@
   top: 0;
   width: 100%;
   .Page__title {
-    color: $secondColor;
+    color: white;
+    font-size: 4.75rem;
+    font-weight: 700;
     margin-bottom: 0;
     text-shadow: 2px 2px 5px rgba(black, .3);
+    &::after {
+      background-image: url('./../images/separator-white.png');
+      height: 20px;
+      width: 189px;
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 3rem;
+    }
   }
 }
 .Page__text {

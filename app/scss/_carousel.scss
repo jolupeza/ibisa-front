@@ -201,12 +201,12 @@
   }
   &--normal {
     .carousel-control-prev, .carousel-control-next {
-      color: $secondColor;
+      color: $accentColor;
       font-size: 4rem;
       opacity: 1;
       width: auto;
       &:focus, &:hover {
-        color: $thirdColor;
+        color: $secondColor;
       }
     }
   }

@@ -52,7 +52,7 @@
   padding-left: 0;
   width: 100%;
   li {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     list-style: none;
     margin-right: 1.5rem;
     text-transform: uppercase;
@@ -73,6 +73,7 @@
       }
       .sub-menu {
         li {
+          font-weight: 400;
           &.current-menu-item {
             a {
               color: $accentColor;
@@ -106,13 +107,18 @@
       width: 0;
     }
     li {
-      font-size: 1.25rem;
+      //font-size: 1.25rem;
       margin-bottom: .8rem;
       margin-right: 0;
       width: 100%;
       a {
         color: white;
         &:focus, &:hover {
+          color: $accentColor;
+        }
+      }
+      &.active, &.current-menu-item, &.current-menu-parent {
+        a {
           color: $accentColor;
         }
       }
